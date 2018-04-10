@@ -17,3 +17,6 @@ submitSlurmJob:
 outputDir:
 	if [ ! -d 'out/findPrimes/' ];then mkdir --parents 'out/findPrimes/';fi
 
+submitSlurmJob:
+	sbatch 'slurmSubmissionScript.sh'
+
