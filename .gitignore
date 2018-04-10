@@ -1,4 +1,5 @@
 
+.*.swp
 *.run
 *.log
 out/**
