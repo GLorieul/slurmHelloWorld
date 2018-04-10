@@ -12,10 +12,10 @@ void saveToFile(string filePath, vector<int> primes);
 
 int main(void)
 {
-    const int nbPrimesToFind = parseCfg("in/cfg/simA/params.cfg");
+    const int nbPrimesToFind = parseCfg("in/cfg/findPrimes/params.cfg");
     vector<int> primes;
     findNFirstPrimes(primes, nbPrimesToFind);
-    saveToFile("out/simA/out.txt", primes);
+    saveToFile("out/findPrimes/out.txt", primes);
 
     return 0;
 }
