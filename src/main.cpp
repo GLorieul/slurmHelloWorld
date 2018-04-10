@@ -1,4 +1,5 @@
 
+#include <cassert>
 #include <fstream>
 #include <iostream>
 #include <vector>
@@ -10,9 +11,13 @@ void findNFirstPrimes(vector<int>& primes, const int nbPrimesToFind);
 bool isPrime(int candidate, vector<int> primes);
 void saveToFile(string filePath, vector<int> primes);
 
-int main(void)
+int main(int argc, char* argv[])
 {
-    const int nbPrimesToFind = parseCfg("in/cfg/findPrimes/params.cfg");
+    bool hasOneArgument = (argc==2); //argv[0] is program name
+    assert(hasOneArgument);
+    string cfgFile = argv[1];
+
+    const int nbPrimesToFind = parseCfg(cfgFile);
     vector<int> primes;
     findNFirstPrimes(primes, nbPrimesToFind);
     saveToFile("out/findPrimes/out.txt", primes);
