@@ -1,4 +1,5 @@
 
 *.run
-out/simA/**
+*.log
+out/**
 
